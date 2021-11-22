@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<style>
+    .a1 {
+        margin: 5px;
+    }
+
+    .b1 {
+        width: 25%;
+    }
+
+    ul {
+        width: 600px;
+        box-shadow: whitesmoke;
+    }
+</style>
+
+<body class="bg-secondary">
+    
+        <div class="container m-5 text-ceter ">
+            <h5 class="text-center">My To Do List<br>
+            <form>
+                <input type="text" name="adding" id="a1" placeholder="Enter text">
+                <button type="submit">Submit</button>
+            </form>
+        </h5>
+            <ul class="list-group m-5  col-12  " id="list">
+                <li class="list-group-item d-flex justify-content-between">
+                    <span>LIST1</span>
+                    <i class="fa fa-trash-o" aria-hidden="true" ></i>
+                </li>
+                <li class="list-group-item d-flex justify-content-between">
+                    <span>LIST2</span>
+                    <i class="fa fa-trash-o" aria-hidden="true" ></i>
+                </li>
+                <li class="list-group-item d-flex justify-content-between">
+                    <span>LIST3</span>
+                    <i class="fa fa-trash-o" aria-hidden="true" ></i>
+                </li>
+            </ul>
+        </div>
+    
+    <script>
+         var h1 = document.querySelector('#a1');
+        var a = document.querySelector('ul');
+        var f1 = document.querySelector('form');
+       
+       
+        f1.addEventListener('submit', function (e) {
+            e.preventDefault();
+              
+            var b1 = f1.adding.value;
+            let x1 = `<li class="list-group-item d-flex justify-content-between">${b1}<i class="fa fa-trash-o" aria-hidden="true"></i></li>`;
+           
+            a.innerHTML += x1;
+            f1.reset();
+        });
+        a.addEventListener('click',e=>{
+    if(e.target.classList.contains('fa-trash')){
+e.target.parentElement.remove();
+console.log(e.target.parentElement);
+    }
+})
+       
+
+    
+      
+        // const ul = document.querySelector('.list-group');
+        //     ul.addEventListener('click', function (e) {
+            
+   
+           
+            
+
+
+            
+            
+
+
+    </script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
